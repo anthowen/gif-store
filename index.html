@@ -50,8 +50,8 @@
 
       const html = htm.bind(React.createElement)
 
-      const getGiphyUrl = gifLink =>
-        `https://i.giphy.com/${gifLink.split('/').pop().split('-').pop()}.mp4`
+      const getGDriveLink = url =>
+        `https://drive.google.com/uc?id=${url.split('/').pop()}`
 
       function App() {
         const [search, setSearch] = React.useState('')
@@ -143,13 +143,10 @@
                         )
                       }}
                     >
-                      <video
-                        autoplay="yessss"
-                        loop="uh huh"
-                        muted="shhh"
+                      <img
                         style=${{display: 'block', width: '100%'}}
                         alt=${key}
-                        src=${getGiphyUrl(gif)}
+                        src=${getGDriveLink(gif)}
                       />
                       <div>
                         <strong>${key}</strong>
