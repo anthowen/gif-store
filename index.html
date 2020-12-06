@@ -137,9 +137,8 @@
                         cursor: 'pointer',
                       }}
                       onClick=${() => {
-                        const text = `?kif ${key}`
-                        navigator.clipboard.writeText(text).then(
-                          () => alert(`copied "${text}" to clipboard`),
+                        navigator.clipboard.writeText(gif).then(
+                          () => alert(`copied the link of ${key} gif to clipboard`),
                           () => alert('error copying'),
                         )
                       }}
