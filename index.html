@@ -53,6 +53,8 @@
       const getGDriveLink = url =>
         `https://drive.google.com/uc?id=${url.split('/').pop()}`
 
+      console.log('test getGDriveLink', getGDriveLink("https://drive.google.com/file/d/14iYL35hpNe3LIx9kmu0KJ-gHZ1aGbEzy"));
+
       function App() {
         const [search, setSearch] = React.useState('')
 
