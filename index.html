@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>TSG(telegram sticker gif) Directory</title>
+    <title>TSGifs Directory</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
       rel="stylesheet"
@@ -53,17 +53,15 @@
       const getGDriveLink = url =>
         `https://drive.google.com/uc?id=${url.split('/').pop()}`
 
-      console.log('test getGDriveLink', getGDriveLink("https://drive.google.com/file/d/14iYL35hpNe3LIx9kmu0KJ-gHZ1aGbEzy"));
-
       function App() {
         const [search, setSearch] = React.useState('')
 
         const {data = [], error, status} = useQuery({
-          queryKey: 'kifs',
+          queryKey: 'tsgifs',
           queryFn: () =>
             ky
               .get(
-                'https://raw.githubusercontent.com/anthowen/gif-store/main/kifs.json',
+                'https://raw.githubusercontent.com/anthowen/gif-store/main/tsgifs.json',
               )
               .json()
               .then(data =>
@@ -78,7 +76,7 @@
         }
 
         if (status === 'success') {
-          const kifs = matchSorter(data, search, {
+          const tsgifs = matchSorter(data, search, {
             keys: ['key', 'aliases', 'emojiAliases'],
           })
 
@@ -91,9 +89,9 @@
               }}
             >
               <div>
-                <h1 style=${{textAlign: 'center'}}>TSGs Directory</h1>
+                <h1 style=${{textAlign: 'center'}}>TSGifs Directory</h1>
                 <em style=${{textAlign: 'center', display: 'block'}}>
-                  A list of available tsgs (Telegram sticker gifs)
+                  A list of available tsgs (Telegram Sticker Gifs)
                 </em>
               </div>
               <div>
@@ -109,8 +107,8 @@
                     style=${{width: '100%'}}
                     onChange=${event => setSearch(event.target.value)}
                     type="search"
-                    placeholder="Search kifs"
-                    aria-label="Search kifs"
+                    placeholder="Search tsgifs"
+                    aria-label="Search tsgifs"
                     value=${search}
                     autofocus="heck yah"
                   />
@@ -129,7 +127,7 @@
                   margin: 0,
                 }}
               >
-                ${kifs.map(
+                ${tsgifs.map(
                   ({key, gif, aliases = [], emojiAliases = []}) => html`
                     <li
                       key=${key}
@@ -169,10 +167,7 @@
                 }}
               >
                 <small>
-                  Created with 💙 by Kent C. Dodds in ~10 minutes. Feel free
-                  to${' '}
-                  <a href="https://github.com/kentcdodds/kifs/issues/3">
-                    make it better
+                  Created with 💙 <a href="https://twitter/anthowen03">@anthowen03</a>. Credit goes to <a href="https://twitter/kentcdodds">@kentcdodds</a> for the awesome idea and base code!"
                   </a>
                 </small>
               </div>

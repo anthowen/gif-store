@@ -11,6 +11,6 @@ jobs:
           node-version: 14.x
       - run: |
           npm install parse-json@5
-          node -e "require('parse-json')(require('fs').readFileSync('./kifs.json', 'utf-8'))"
-          echo kifs.json is valid
+          node -e "require('parse-json')(require('fs').readFileSync('./tsgifs.json', 'utf-8'))"
+          echo tsgifs.json is valid
 

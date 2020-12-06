@@ -1,6 +1,6 @@
-# kifs
+# tsgifs
 
-![JSON Test](https://github.com/kentcdodds/kifs/workflows/JSON%20Test/badge.svg)
+![JSON Test](https://github.com/anthowen/gif-store/workflows/JSON%20Test/badge.svg)
 
 The data for the ?kif command in KCD Discord: https://kcd.im/discord
 
