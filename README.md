@@ -11,4 +11,4 @@ Hope you find this useful and intersting, and feel free to add your own gifs by 
 
 ## About the code
 
-This is run by a single HTML file with React code embedded in. The base code is from @kentcdodds, you can read more about [here](https://github.com/kentcdodds/kifs/issues/3)
+This is run by a single HTML file with React code embedded in. The base code is from @kentcdodds, you can read more about it [here](https://github.com/kentcdodds/kifs/issues/3)
